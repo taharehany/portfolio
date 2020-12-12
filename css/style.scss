@@ -1,0 +1,618 @@
+/* global fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,900;1,500;1,900&display=swap');
+/* global fonts */
+
+/* variables */
+$main_font: 'Montserrat';
+$main_color: #333C4E;
+$sub_color: #F4AD24;
+$background-color: #1a1a1a;
+$progressbar-title-color: #fff;
+
+$li-padding: 5px;
+$animation-delay: .3s;
+/* variables */
+
+/* global style */
+body {
+    font-family: $main_font;
+}
+
+a {
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+.more {
+    padding: 20px 0;
+
+    a {
+        border-radius: 0;
+        color: #fff;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 10px 30px;
+        background-color: #F4AD24;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        i {
+            margin-right: 5px
+        }
+    }
+}
+
+.title {
+    margin-bottom: 50px;
+
+    h2 {
+        font-size: 110px;
+        text-transform: capitalize;
+        font-weight: 700;
+        line-height: 1
+    }
+
+    h3 {
+        font-size: 36px;
+        text-transform: uppercase;
+        font-weight: 600
+    }
+}
+
+/* global style */
+
+/* main menu */
+div.main-container {
+    width: 100%;
+
+    .clear {
+        clear: both
+    }
+
+    .main-menu {
+        background-color: #232A34;
+        left: 0;
+        width: 16%;
+        top: 0;
+        float: left;
+
+
+        .logo {
+            background-color: #2B333E;
+            height: 180px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .navbar-brand {
+                padding: 0;
+                margin-right: 0;
+
+                img {
+                    max-width: 100px
+                }
+            }
+        }
+
+        nav.navbar-expand-lg {
+            zoom: 1;
+            height: 100%;
+
+            .navbar-nav {
+                flex-direction: column;
+                text-align: center;
+                margin: 0;
+                width: 100%;
+
+                li {
+                    border-bottom: 1px solid #505865;
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+
+                    a {
+                        color: #fff;
+                        text-transform: capitalize;
+                        padding: 20px;
+                        color: #505865;
+
+                        i {
+                            display: block;
+                            font-size: 30px;
+                            margin-bottom: 10px;
+                            color: #505865
+                        }
+                    }
+                    &.active {
+                        a {
+                            color: #F4AC23;
+                            i {
+                                color: #F4AC23
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .intery-container {
+        margin-left: 16%;
+    }
+}
+
+/* main menu */
+
+/* hero */
+section.hero {
+    background: url(../imgs/home.jpg) center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding: 70px;
+    height: 100vh;
+
+    .hero-content {
+        padding-left: 100px;
+
+        h2 {
+            color: #fff;
+            font-size: 72px;
+            line-height: 1.2;
+            font-weight: 700;
+            margin-bottom: 30px
+        }
+
+        p {
+            font-size: 16px;
+            letter-spacing: 1px;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 30px
+        }
+    }
+}
+
+/* hero */
+
+/* about */
+section.about {
+    .left-part {
+        padding: 70px 50px;
+
+        .title {
+            h2 {
+                color: #F2F2F2;
+            }
+
+            h3 {
+                color: $main_color;
+            }
+        }
+
+
+        p {
+            color: #7e8890;
+            padding: 20px 0
+        }
+    }
+
+    .right-part-image {
+        background: url(../imgs/about.jpg) center center;
+    }
+}
+
+/* about */
+
+/* work */
+section.work {
+    background-color: #F2F2F2;
+
+    .title {
+        h2 {
+            color: #fff;
+        }
+
+        h3 {
+            color: $main_color;
+        }
+    }
+
+    .projects {
+        padding: 70px 50px;
+
+        .portfolio-item {
+            cursor: pointer;
+            position: relative;
+            margin-bottom: 30px;
+            box-shadow: 0px 0px 30px #dadada;
+
+            .portfolio-item-caption {
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: all 0.2s ease-in-out;
+                opacity: 0;
+                background-color: rgb(35 42 52 / 86%);
+
+                &:hover {
+                    opacity: 1;
+                }
+
+                .portfolio-item-caption-content {
+
+                    i {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+
+            .portfolio-modal {
+                .close {
+                    position: absolute;
+                    z-index: 1;
+                    right: 1.5rem;
+                    top: 1rem;
+                    font-size: 3rem;
+                    line-height: 3rem;
+                    color: #1abc9c;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .right-part-image {
+        background: url(../imgs/works.jpg) center right;
+    }
+}
+
+/* work */
+
+/* work skills */
+section.work-skills {
+    background-color: #1c212a;
+
+    .title {
+        h2 {
+            color: #282f3c;
+        }
+
+        h3 {
+            color: #fff;
+        }
+    }
+
+    .left-work-skills {
+        padding: 70px 50px;
+
+        .desc {
+            color: #7e8890;
+            margin-bottom: 30px
+        }
+
+        .box {
+            margin-bottom: 40px;
+
+            h3 {
+                color: #fff;
+                font-size: 22;
+                text-transform: uppercase;
+                position: relative;
+                display: inline-block;
+                font-weight: 400;
+                margin: 25px 0 40px;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: -15px;
+                    width: 100%;
+                    height: 1px;
+                    background-color: #F4AC23
+                }
+            }
+
+            p {
+                color: #7e8890
+            }
+        }
+    }
+}
+
+/* work skills */
+
+/* skills */
+section.skills {
+    background-color: #fff;
+
+    .title {
+        h2 {
+            color: #F2F2F2;
+        }
+
+        h3 {
+            color: $main_color;
+        }
+    }
+
+    .right-part-image {
+        background: url(../imgs/skills.jpg) right;
+    }
+    
+    .progress-area {
+        padding: 70px 50px;
+
+        @mixin border-radius($radius) {
+            -webkit-border-radius: $radius;
+            -moz-border-radius: $radius;
+            -ms-border-radius: $radius;
+            border-radius: $radius;
+        }
+
+        .skills-bar-container {
+            list-style: none;
+            padding-left: 0;
+
+            li {
+                position: relative;
+                width: 100%;
+                padding: $li-padding;
+                margin-bottom: 10px;
+
+                .progressbar-title {
+                    color: #000;
+
+                    h3 {
+                        display: inline-block;
+                        color: #313131;
+                        font-size: 15px;
+                    }
+
+                    .percent {
+                        position: absolute;
+                        right: $li-padding;
+                    }
+                }
+
+                // end progressbar-title
+
+                .bar-container {
+                    background: #ddd;
+                    position: relative;
+                    width: 100%;
+                    height: 10px;
+                    margin-top: 5px;
+                    display: block;
+                    @include border-radius(5px);
+
+                    .progressbar {
+                        position: absolute;
+                        width: 0%;
+                        height: 100%;
+                        @include border-radius(5px);
+
+                        -webkit-animation-duration: .5s;
+                        animation-duration: .5s;
+                        -webkit-animation-timing-function: ease-out;
+                        animation-timing-function: ease-out;
+                        -webkit-animation-fill-mode: both;
+                        animation-fill-mode: both;
+                    }
+
+                    #progress1 {
+                        -webkit-animation-name: progress1;
+                        animation-name: progress1;
+                        -webkit-animation-delay: $animation-delay;
+                        animation-delay: $animation-delay;
+                    }
+
+                    #progress2 {
+                        -webkit-animation-name: progress2;
+                        animation-name: progress2;
+                        -webkit-animation-delay: $animation-delay*2;
+                        animation-delay: $animation-delay*2;
+                    }
+
+                    #progress3 {
+                        -webkit-animation-name: progress3;
+                        animation-name: progress3;
+                        -webkit-animation-delay: $animation-delay*3;
+                        animation-delay: $animation-delay*3;
+                    }
+
+                    #progress4 {
+                        -webkit-animation-name: progress4;
+                        animation-name: progress4;
+                        -webkit-animation-delay: $animation-delay*4;
+                        animation-delay: $animation-delay*4;
+                    }
+
+                    #progress5 {
+                        -webkit-animation-name: progress5;
+                        animation-name: progress5;
+                        -webkit-animation-delay: $animation-delay*5;
+                        animation-delay: $animation-delay*5;
+                    }
+                    #progress6 {
+                        -webkit-animation-name: progress6;
+                        animation-name: progress6;
+                        -webkit-animation-delay: $animation-delay*6;
+                        animation-delay: $animation-delay*6;
+                    }
+
+                }
+
+                // end bar-container
+            }
+        }
+
+        .progressred {
+            background-color: $sub_color;
+        }
+
+        .progressblue {
+            background-color: $sub_color;
+        }
+
+        .progresspurple {
+            background-color: $sub_color;
+        }
+
+        .progressorange {
+            background-color: $sub_color;
+        }
+
+        .progressgreen {
+            background-color: $sub_color;
+        }
+        @keyframes progress1 {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+
+        @keyframes progress2 {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 90%;
+            }
+        }
+
+        @keyframes progress3 {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 70%;
+            }
+        }
+
+        @keyframes progress4 {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 55%;
+            }
+        }
+
+        @keyframes progress5 {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 65%;
+            }
+        }
+        @keyframes progress6 {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 65%;
+            }
+        }
+    }
+}
+
+/* skills */
+
+/* get in touch */
+section.get-in-touch {
+    background-color: $sub_color;
+    padding: 30px 0;
+    text-align: center;
+
+    a {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+
+/* get in touch */
+
+/* contact */
+section.contact {
+    background-color: #fff;
+
+    .title {
+        h2 {
+            color: #F2F2F2;
+        }
+
+        h3 {
+            color: $main_color;
+        }
+    }
+
+    .contact-area {
+        padding: 70px 50px;
+
+        .desc {
+            color: #7e8890;
+            margin-bottom: 30px
+        }
+
+        form {
+            .form-control {
+                border-radius: 0;
+                padding: 25px 15px;
+                font-size: 13px;
+                margin-bottom: 25px;
+
+                &:focus,
+                &:hover {
+                    outline: none;
+                    box-shadow: none;
+                    border-color: #ddd
+                }
+            }
+
+            button {
+                border-radius: 0;
+                color: #fff;
+                font-weight: 600;
+                text-transform: uppercase;
+                padding: 10px 40px;
+                background-color: #F4AD24;
+
+                &:hover,
+                &:focus {
+                    text-decoration: none;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .right-part-image {
+        background: url(../imgs/contact.jpg) center center no-repeat;
+        background-size: cover
+    }
+}
+
+/* contact */

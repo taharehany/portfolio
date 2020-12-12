@@ -1,0 +1,483 @@
+/* global fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,900;1,500;1,900&display=swap");
+/* global fonts */
+/* variables */
+/* variables */
+/* global style */
+body {
+  font-family: "Montserrat";
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+.more {
+  padding: 20px 0;
+}
+.more a {
+  border-radius: 0;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  background-color: #F4AD24;
+}
+.more a:hover, .more a:focus {
+  text-decoration: none;
+  color: #fff;
+}
+.more a i {
+  margin-right: 5px;
+}
+
+.title {
+  margin-bottom: 50px;
+}
+.title h2 {
+  font-size: 110px;
+  text-transform: capitalize;
+  font-weight: 700;
+  line-height: 1;
+}
+.title h3 {
+  font-size: 36px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* global style */
+/* main menu */
+div.main-container {
+  width: 100%;
+}
+div.main-container .clear {
+  clear: both;
+}
+div.main-container .main-menu {
+  background-color: #232A34;
+  left: 0;
+  width: 16%;
+  top: 0;
+  float: left;
+}
+div.main-container .main-menu .logo {
+  background-color: #2B333E;
+  height: 180px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.main-container .main-menu .logo .navbar-brand {
+  padding: 0;
+  margin-right: 0;
+}
+div.main-container .main-menu .logo .navbar-brand img {
+  max-width: 100px;
+}
+div.main-container .main-menu nav.navbar-expand-lg {
+  zoom: 1;
+  height: 100%;
+}
+div.main-container .main-menu nav.navbar-expand-lg .navbar-nav {
+  flex-direction: column;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+}
+div.main-container .main-menu nav.navbar-expand-lg .navbar-nav li {
+  border-bottom: 1px solid #505865;
+}
+div.main-container .main-menu nav.navbar-expand-lg .navbar-nav li:last-child {
+  border-bottom: none;
+}
+div.main-container .main-menu nav.navbar-expand-lg .navbar-nav li a {
+  color: #fff;
+  text-transform: capitalize;
+  padding: 20px;
+  color: #505865;
+}
+div.main-container .main-menu nav.navbar-expand-lg .navbar-nav li a i {
+  display: block;
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #505865;
+}
+div.main-container .main-menu nav.navbar-expand-lg .navbar-nav li.active a {
+  color: #F4AC23;
+}
+div.main-container .main-menu nav.navbar-expand-lg .navbar-nav li.active a i {
+  color: #F4AC23;
+}
+div.main-container .intery-container {
+  margin-left: 16%;
+}
+
+/* main menu */
+/* hero */
+section.hero {
+  background: url(../imgs/home.jpg) center center fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 70px;
+  height: 100vh;
+}
+section.hero .hero-content {
+  padding-left: 100px;
+}
+section.hero .hero-content h2 {
+  color: #fff;
+  font-size: 72px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+section.hero .hero-content p {
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* hero */
+/* about */
+section.about .left-part {
+  padding: 70px 50px;
+}
+section.about .left-part .title h2 {
+  color: #F2F2F2;
+}
+section.about .left-part .title h3 {
+  color: #333C4E;
+}
+section.about .left-part p {
+  color: #7e8890;
+  padding: 20px 0;
+}
+section.about .right-part-image {
+  background: url(../imgs/about.jpg) center center;
+}
+
+/* about */
+/* work */
+section.work {
+  background-color: #F2F2F2;
+}
+section.work .title h2 {
+  color: #fff;
+}
+section.work .title h3 {
+  color: #333C4E;
+}
+section.work .projects {
+  padding: 70px 50px;
+}
+section.work .projects .portfolio-item {
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 30px;
+  box-shadow: 0px 0px 30px #dadada;
+}
+section.work .projects .portfolio-item .portfolio-item-caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  background-color: rgba(35, 42, 52, 0.86);
+}
+section.work .projects .portfolio-item .portfolio-item-caption:hover {
+  opacity: 1;
+}
+section.work .projects .portfolio-item .portfolio-item-caption .portfolio-item-caption-content i {
+  font-size: 1.5rem;
+}
+section.work .projects .portfolio-item .portfolio-modal .close {
+  position: absolute;
+  z-index: 1;
+  right: 1.5rem;
+  top: 1rem;
+  font-size: 3rem;
+  line-height: 3rem;
+  color: #1abc9c;
+  opacity: 1;
+}
+section.work .right-part-image {
+  background: url(../imgs/works.jpg) center right;
+}
+
+/* work */
+/* work skills */
+section.work-skills {
+  background-color: #1c212a;
+}
+section.work-skills .title h2 {
+  color: #282f3c;
+}
+section.work-skills .title h3 {
+  color: #fff;
+}
+section.work-skills .left-work-skills {
+  padding: 70px 50px;
+}
+section.work-skills .left-work-skills .desc {
+  color: #7e8890;
+  margin-bottom: 30px;
+}
+section.work-skills .left-work-skills .box {
+  margin-bottom: 40px;
+}
+section.work-skills .left-work-skills .box h3 {
+  color: #fff;
+  font-size: 22;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+  margin: 25px 0 40px;
+}
+section.work-skills .left-work-skills .box h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  width: 100%;
+  height: 1px;
+  background-color: #F4AC23;
+}
+section.work-skills .left-work-skills .box p {
+  color: #7e8890;
+}
+
+/* work skills */
+/* skills */
+section.skills {
+  background-color: #fff;
+}
+section.skills .title h2 {
+  color: #F2F2F2;
+}
+section.skills .title h3 {
+  color: #333C4E;
+}
+section.skills .right-part-image {
+  background: url(../imgs/skills.jpg) right;
+}
+section.skills .progress-area {
+  padding: 70px 50px;
+}
+section.skills .progress-area .skills-bar-container {
+  list-style: none;
+  padding-left: 0;
+}
+section.skills .progress-area .skills-bar-container li {
+  position: relative;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+section.skills .progress-area .skills-bar-container li .progressbar-title {
+  color: #000;
+}
+section.skills .progress-area .skills-bar-container li .progressbar-title h3 {
+  display: inline-block;
+  color: #313131;
+  font-size: 15px;
+}
+section.skills .progress-area .skills-bar-container li .progressbar-title .percent {
+  position: absolute;
+  right: 5px;
+}
+section.skills .progress-area .skills-bar-container li .bar-container {
+  background: #ddd;
+  position: relative;
+  width: 100%;
+  height: 10px;
+  margin-top: 5px;
+  display: block;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+section.skills .progress-area .skills-bar-container li .bar-container .progressbar {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+section.skills .progress-area .skills-bar-container li .bar-container #progress1 {
+  -webkit-animation-name: progress1;
+  animation-name: progress1;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+section.skills .progress-area .skills-bar-container li .bar-container #progress2 {
+  -webkit-animation-name: progress2;
+  animation-name: progress2;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+section.skills .progress-area .skills-bar-container li .bar-container #progress3 {
+  -webkit-animation-name: progress3;
+  animation-name: progress3;
+  -webkit-animation-delay: 0.9s;
+  animation-delay: 0.9s;
+}
+section.skills .progress-area .skills-bar-container li .bar-container #progress4 {
+  -webkit-animation-name: progress4;
+  animation-name: progress4;
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+section.skills .progress-area .skills-bar-container li .bar-container #progress5 {
+  -webkit-animation-name: progress5;
+  animation-name: progress5;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+section.skills .progress-area .skills-bar-container li .bar-container #progress6 {
+  -webkit-animation-name: progress6;
+  animation-name: progress6;
+  -webkit-animation-delay: 1.8s;
+  animation-delay: 1.8s;
+}
+section.skills .progress-area .progressred {
+  background-color: #F4AD24;
+}
+section.skills .progress-area .progressblue {
+  background-color: #F4AD24;
+}
+section.skills .progress-area .progresspurple {
+  background-color: #F4AD24;
+}
+section.skills .progress-area .progressorange {
+  background-color: #F4AD24;
+}
+section.skills .progress-area .progressgreen {
+  background-color: #F4AD24;
+}
+@keyframes progress1 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes progress2 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@keyframes progress3 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@keyframes progress4 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 55%;
+  }
+}
+@keyframes progress5 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 65%;
+  }
+}
+@keyframes progress6 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 65%;
+  }
+}
+
+/* skills */
+/* get in touch */
+section.get-in-touch {
+  background-color: #F4AD24;
+  padding: 30px 0;
+  text-align: center;
+}
+section.get-in-touch a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* get in touch */
+/* contact */
+section.contact {
+  background-color: #fff;
+}
+section.contact .title h2 {
+  color: #F2F2F2;
+}
+section.contact .title h3 {
+  color: #333C4E;
+}
+section.contact .contact-area {
+  padding: 70px 50px;
+}
+section.contact .contact-area .desc {
+  color: #7e8890;
+  margin-bottom: 30px;
+}
+section.contact .contact-area form .form-control {
+  border-radius: 0;
+  padding: 25px 15px;
+  font-size: 13px;
+  margin-bottom: 25px;
+}
+section.contact .contact-area form .form-control:focus, section.contact .contact-area form .form-control:hover {
+  outline: none;
+  box-shadow: none;
+  border-color: #ddd;
+}
+section.contact .contact-area form button {
+  border-radius: 0;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 40px;
+  background-color: #F4AD24;
+}
+section.contact .contact-area form button:hover, section.contact .contact-area form button:focus {
+  text-decoration: none;
+  color: #fff;
+}
+section.contact .right-part-image {
+  background: url(../imgs/contact.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+/* contact */
+
+/*# sourceMappingURL=style.css.map */
