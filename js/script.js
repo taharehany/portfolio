@@ -39,11 +39,13 @@ $(function () {
 
 
         var lang = {
-            "html": "100%",
+            "html": "95%",
             "css": "90%",
+            "bootstrap": "80%",
             "javascript": "70%",
-            "php": "55%",
-            "angular": "65%"
+            "ecma": "50%",
+            "react": "70%",
+            "angular": "60%"
         };
 
         var multiply = 4;

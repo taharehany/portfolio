@@ -356,6 +356,12 @@ section.skills .progress-area .skills-bar-container li .bar-container #progress6
   -webkit-animation-delay: 1.8s;
   animation-delay: 1.8s;
 }
+section.skills .progress-area .skills-bar-container li .bar-container #progress7 {
+  -webkit-animation-name: progress5;
+  animation-name: progress5;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
 section.skills .progress-area .progressred {
   background-color: #F4AD24;
 }
@@ -376,7 +382,7 @@ section.skills .progress-area .progressgreen {
     width: 0%;
   }
   100% {
-    width: 100%;
+    width: 95%;
   }
 }
 @keyframes progress2 {
@@ -392,7 +398,7 @@ section.skills .progress-area .progressgreen {
     width: 0%;
   }
   100% {
-    width: 70%;
+    width: 80%;
   }
 }
 @keyframes progress4 {
@@ -400,7 +406,7 @@ section.skills .progress-area .progressgreen {
     width: 0%;
   }
   100% {
-    width: 55%;
+    width: 70%;
   }
 }
 @keyframes progress5 {
@@ -408,7 +414,7 @@ section.skills .progress-area .progressgreen {
     width: 0%;
   }
   100% {
-    width: 65%;
+    width: 50%;
   }
 }
 @keyframes progress6 {
@@ -416,7 +422,15 @@ section.skills .progress-area .progressgreen {
     width: 0%;
   }
   100% {
-    width: 65%;
+    width: 70%;
+  }
+}
+@keyframes progress7 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 60%;
   }
 }
 

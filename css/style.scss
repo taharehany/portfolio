@@ -452,7 +452,13 @@ section.skills {
                         -webkit-animation-delay: $animation-delay*6;
                         animation-delay: $animation-delay*6;
                     }
-
+                    #progress7 {
+                        -webkit-animation-name: progress5;
+                        animation-name: progress5;
+                        -webkit-animation-delay: $animation-delay*5;
+                        animation-delay: $animation-delay*5;
+                    }
+        
                 }
 
                 // end bar-container
@@ -484,7 +490,7 @@ section.skills {
             }
 
             100% {
-                width: 100%;
+                width: 95%;
             }
         }
 
@@ -504,7 +510,7 @@ section.skills {
             }
 
             100% {
-                width: 70%;
+                width: 80%;
             }
         }
 
@@ -514,7 +520,7 @@ section.skills {
             }
 
             100% {
-                width: 55%;
+                width: 70%;
             }
         }
 
@@ -524,7 +530,7 @@ section.skills {
             }
 
             100% {
-                width: 65%;
+                width: 50%;
             }
         }
         @keyframes progress6 {
@@ -533,7 +539,16 @@ section.skills {
             }
 
             100% {
-                width: 65%;
+                width: 70%;
+            }
+        }
+        @keyframes progress7 {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 60%;
             }
         }
     }
