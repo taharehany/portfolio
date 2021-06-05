@@ -1,42 +1,33 @@
 /*global $*/
 $(function () {
     "use strict";
+    var navbarToggler = $('.navbar-toggler');
+    var navbarCollapse = $('.collapse.navbar-collapse');
+    var navItem = $('.navbar-nav .nav-item');
 
     $('document').ready(function () {
-        /*!
-         * Sticky-kit
-         * A jQuery plugin for making smart sticky elements
-         *
-         * Source: http://leafo.net/sticky-kit/
-         */
-
-        $(".main-menu").stick_in_parent({
-            offset_top: 0,
-            parent: "body"
-        });
-
-
         $('.navbar-nav li').click(function () {
-           $(this).addClass('active').siblings().removeClass('active'); 
+            $(this).addClass('active').siblings().removeClass('active');
         });
-        
-        var heightSectionWork = $(".work").height();
-        $(".work .right-part-image").height(heightSectionWork + 120);
 
-        var heightSectionAbout = $(".about").height();
-        $(".about .right-part-image").height(heightSectionAbout + 120);
+        navbarToggler.on("click", function () {
+            navbarCollapse.toggleClass('active');
+            $('body').toggleClass('over-flow');
+        });
 
-        var heightSectionWorkskills = $(".work-skills").height();
-        $(".work-skills .right-part-image").height(heightSectionWorkskills + 120);
+        //toggle between menue and x in navbar
+        navbarToggler.on("click", function () {
+            if (navbarCollapse.hasClass("active")) {
+                $(this).addClass('close')
+            } else {
+                $(this).removeClass('close')
+            }
+        });
 
-        var heightSectionSkills = $(".skills").height();
-        $(".skills .right-part-image").height(heightSectionSkills + 120);
-
-        var heightSectionContact = $(".contact").height();
-        $(".contact .right-part-image").height(heightSectionContact + 120);
-
-        /*console.log(heightSectionAbout);*/
-
+        navItem.on("click", function () {
+            navbarCollapse.removeClass('active');
+            navbarToggler.removeClass('close')
+        });
 
         var lang = {
             "html": "95%",
@@ -62,5 +53,40 @@ $(function () {
 
         });
 
+        // Select all links with hashes
+        $('a[href*="#"]')
+            // Remove links that don't actually link to anything
+            .not('[href="#"]')
+            .not('[href="#0"]')
+            .click(function (event) {
+                // On-page links
+                if (
+                    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+                    location.hostname == this.hostname
+                ) {
+                    // Figure out element to scroll to
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    // Does a scroll target exist?
+                    if (target.length) {
+                        // Only prevent default if animation is actually gonna happen
+                        event.preventDefault();
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 500, function () {
+                            // Callback after animation
+                            // Must change focus!
+                            var $target = $(target);
+                            $target.focus();
+                            if ($target.is(":focus")) { // Checking if the target was focused
+                                return false;
+                            } else {
+                                $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                                $target.focus(); // Set focus again
+                            };
+                        });
+                    }
+                }
+            });
     });
 });
